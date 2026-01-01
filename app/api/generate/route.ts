@@ -25,7 +25,8 @@ export async function POST(req: Request) {
       );
     }
 
-    const prompt = `
+    
+const prompt = `
 You are an expert agency account manager.
 
 Write ONE professional follow-up email.
