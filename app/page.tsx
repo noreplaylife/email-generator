@@ -22,8 +22,14 @@ export default function Home() {
       const res = await fetch("/api/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ industry, clientName, lastContact, goal, tone }),
-      });
+       body: JSON.stringify({
+  clientName,
+  situation: `Industry: ${industry}. Last contact: ${lastContact}. Goal: ${goal}.`,
+  tone,
+  notes: "",
+}),
+
+
 
       const data = await res.json();
 
